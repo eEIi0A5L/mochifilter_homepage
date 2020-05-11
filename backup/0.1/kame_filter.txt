@@ -1,0 +1,102 @@
+[Adblock Plus 2.0]
+! Title: 亀フィルタ（ウイルスサイトブロック）
+! Description: ウイルスサイトをブロックする
+!
+! Last modified: 2017/11/03 12:00 JST
+! Expires: 6 hours (update frequency)
+! Homepage: http://pokapoka.html.xdomain.jp/kame.html
+
+
+! ウイルスサイトの可能性があるサイト START--------------------------
+!cn,kr,skをまるごとブロックするのはさすがにやりすぎた
+!||cn^
+!||kr^
+!||sk^
+||gu-ru.net^
+||www.amazon.co.jp.com-w.win^
+||com-w.win^
+||win^
+!フィッシング詐欺に多用されているドメイン
+!xyzは有用サイトが多くなってきたのではずす
+!||xyz^
+||xxx^
+||clubs^
+||club^
+||click^
+||link^
+||com-w.win^
+||site^
+||work^
+!ほかの優良なサイトもブロックされてしまうのでコメント化。
+!||it^
+||top^
+!||world^
+!５ちゃんねるの荒らしが誘導しているサイト。http://xn--t8jvd4grbu0c31aw745c.biz/bihada/1091.html
+!ほかの優良なサイトもブロックされてしまうのでコメント化。
+!||biz^
+!miomioはマルウェアの疑いがあるため全面禁止
+||www.miomio.tv^
+! ウイルスサイトの可能性があるサイト END--------------------------
+
+!悪質なまとめサイト
+||blog.livedoor.jp/ringotomomin/
+
+!エロサイトでCPUが100%はりつきになる悪質広告が増加中 [無断転載禁止]©2ch.net [835453343]
+!https://leia.2ch.net/test/read.cgi/poverty/1504497294/
+||www.support.microsoft21013ajpmschf8356.com.s3-website-ap-northeast-1.amazonaws.com^
+||archive.fo^
+
+!フィッシング詐欺
+||linewg.cn^
+
+!５ちゃんねるの荒らしが誘導しているサイト---------------------
+||livebby.b2.valueserver.jp^
+||edax.getamonkey.com^
+||derx.stanciu.biz^
+||qsnews.ndra.biz^
+https://goo.gl/En6m3D 
+http://www.bityet.us/s7b47si.jpg
+.fc2.com/p/F0Nll5V-?.gif
+!END-----------------------------------------------------------
+
+!例外-------------------------------------------------
+!住所でぽん→xyz自体をはずした
+!@@||jpon.xyz^
+!!twitterから外部への短縮URLで使われる
+!@@||dlvr.it^
+!!reddit
+!@@||redd.it^
+!@@||cnn.it^
+!!livedoorの個人サイト
+!@@||livedoor.biz^
+!END--------------------------------------------------
+
+!MDLから.jpのサイトだけ抜き出し-----------------------
+210237148191.cidr.jtidc.jp
+aasc.or.jp
+butter-delimmo.jp
+e-service.jpdm.edu.bd
+gaspa-web.jp
+grangrace.jp
+g-r.co.jp
+irumakg.jp
+jk-bic.jp
+jwa-niigata.jp
+kamabokoworks.jp
+kashimayunohana.jp
+navitime.co.jp
+nozomimiyazaki.main.jp
+oneby1.jp
+payment.on.your.account.rangdeindia.jp
+plaso.jp
+pluscolorn.sub.jp
+rentskinow.jp
+smcw-member.jp
+tga.co.jp
+tobacco.jp
+umedaumeda.ec-net.jp
+www.whbf.jp
+your.case.id.for.this.reason.is.pp.rangdeindia.jp
+!END--------------------------------------------------
+
+! END

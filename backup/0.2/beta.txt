@@ -1,0 +1,12 @@
+! beta.txt 
+
+!ことり
+!beta
+||syndication.twitter.com/i/jot
+||syndication.twitter.com/settings
+||platform.twitter.com/widgets/widget_iframe
+||platform.twitter.com/widgets.js
+
+
+
+!END

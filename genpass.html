@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+<link rel="stylesheet" href="/default.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>パスワード自動生成</title>
+<script type="text/javascript">
+<!--
+function rand( min, max) {
+	var hanni = max - min + 1;
+	var random = Math.floor( Math.random() * hanni) + min;
+	return random;
+}
+function escapeHTML(str) {
+  return str.replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+}
+function makepass( keta, include_symbol) {
+	// Oと0はまぎらわしいので消した。2017.11.23
+	// Iとlも消した。2018.3.29
+	var charlist = new Array(
+		//"`~!@#$%^&*()_-+={}[]\|\"'<>,.?/",
+		"!\"#$%&'()*+,-./?",
+		"abcdefghijkmnopqrstuvwxyz",
+		"ABCDEFGHJKLMNPQRSTUVWXYZ",
+		"123456789"
+	);
+	var randnum = Math.random();
+	var passstr = ""; // 最終的なパスワード
+	var is_have_underbar = true; // 本当はfalseにしなければ_が入らないが、_を入れるとFirefoxでダブルクリックで文字列選択できなくなることがわかったので、この機能をOFFするために、trueに変更した。2016/5/10
+	for ( var i = 0; i < keta; i++) {
+		var start_type = 1;
+		if ( include_symbol ) {
+			start_type = 0;
+		}
+		var type = rand( start_type, charlist.length - 1);
+		var index = rand( 0, charlist[type].length - 1);
+
+		// "_"を一つ入れる
+		var this_char = charlist[type].charAt(index);
+		if ( is_have_underbar == false && keta==14 && rand( 0, keta - i) < 1 ) {
+			this_char = "_";
+			is_have_underbar = true;
+		}
+		passstr += this_char;
+	}
+	console.log("passstr="+passstr);
+	passstr = escapeHTML(passstr);
+	return passstr;
+}
+function showpass() {
+	var element=document.getElementById("pass8");
+	var passstr = makepass( 8, false);
+	element.innerHTML = passstr;
+
+	var element=document.getElementById("pass14eisu");
+	var passstr = makepass( 14, false);
+	element.innerHTML = passstr;
+
+	var element=document.getElementById("pass16");
+	var passstr = makepass( 16, true);
+	element.innerHTML = passstr;
+}
+// -->
+</script>
+</head>
+<body onload="showpass()">
+<h1>パスワード自動生成</h1>
+<p style="cursor:pointer;">パスワードを自動生成します。</p>
+<div id="pass8" style="font-family:monospace;"></div>
+<br>
+<div id="pass14eisu" style="font-family:monospace;"></div>
+<br>
+<div id="pass16" style="font-family:monospace;"></div>
+</body>
+</html>

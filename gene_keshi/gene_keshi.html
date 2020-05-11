@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/default.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ジェネ消しβ</title>
+</head>
+
+<body>
+<a href="/"><img src="../new8629-300x300.jpg" width="30" height="30">TOPに戻る</a>
+
+<h1>ジェネ消しβ</h1>
+
+指定したフィルタリストから、ジェネリックフィルタ（汎用フィルタ）を削除するツールです。（βテスト中）
+
+<h3>使い方</h3>
+<ul>
+<li>「https://ss1.xrea.com/z4s85ttt.s1007.xrea.com/adblock/gene_keshi.php?url=」の後に、対象のフィルタリストのURLを指定してください</li>
+<li>例えば「EasyList」の場合はこのようになります。uBOにはこのURLそのまま登録してください。<a href="https://ss1.xrea.com/z4s85ttt.s1007.xrea.com/adblock/gene_keshi.php?url=https://easylist.to/easylist/easylist.txt">https://ss1.xrea.com/z4s85ttt.s1007.xrea.com/adblock/gene_keshi.php?url=https://easylist.to/easylist/easylist.txt</a></li>
+<li>すると「EasyList」からジェネリックフィルタが除外されたものが返ってきます。</li>
+<li>除外されたジェネリックフィルタ行は「!GENEKESHI: 」が先頭についてコメント化されています。</li>
+<li>gene_keshi.phpで処理されたものは、タイトルに「（ジェネ消し化）」が付きます</li>
+<li>ソースコードはここで公開しています。<a href="https://github.com/eEIi0A5L/gene_keshi">https://github.com/eEIi0A5L/gene_keshi</a></li>
+<li>「gene_keshi.php」を自分が所有するサイトに設置して個人で使ってもいいです。</li>
+</ul>
+
+
+
+<h3>FAQ</h3>
+<ul>
+<li>Q：なぜジェネリックフィルタを削除するのか？</li>
+<ul>
+<li>A1：ジェネリックフィルタは、誤爆の元になるため。</li>
+<li>A2：既存の資産（フィルタ）も利用しつつ、誤爆は避けたい人用のツールです。</li>
+</ul>
+<li>Q：「汎用的な要素隠蔽フィルターを無視する」とは何が違うのですか？</li>
+<ul>
+<li>A1：「汎用的な要素隠蔽フィルターを無視する」は、要素隠蔽フィルタだけを消します。例：「##.ad」←こういうやつ
+</li>
+<li>A2：「ジェネ消し」は、上記に加え汎用ネットワークフィルタも消します「/ad_」←こういうやつ</li>
+<li>A3：「汎用的な要素隠蔽フィルターを無視する」は購読しているフィルタリスト全体に作用しますが、「ジェネ消し」は指定したフィルタリストに対してのみ作用します。</li>
+</ul>
+</ul>
+
+<h3>スクリーンショット</h3>
+<img src="genekeshi.png"/>
+
+<hr>
+<a href="/"><img src="../new8629-300x300.jpg" width="30" height="30">TOPに戻る</a>
+
+
+<hr>
+<div class="footer">
+Twitter: <a href="https://twitter.com/mochi_adfilter">@mochi_adfilter</a><br/>
+email: <a href="mailto:mochifilter@yahoo.co.jp">mochifilter@yahoo.co.jp</a><br/>
+</div>
+
+</body>
+
+</html>

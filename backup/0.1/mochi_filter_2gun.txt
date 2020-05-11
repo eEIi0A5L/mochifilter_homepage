@@ -1,0 +1,45 @@
+[Adblock Plus 2.0]
+! Title: もち２軍フィルタ - Supplement
+! Last modified: 26 Oct 2017 12:00 JST
+! Expires: 6 hours (update frequency)
+! Homepage: http://pokapoka.html.xdomain.jp/mochi_2gun.html
+! 
+! 
+
+
+!２軍フィルタ
+
+!もち----------------------------------------------
+
+
+
+
+!痛いニュース
+||blog.livedoor.jp/dqnplus/settings/ad.js
+
+
+
+
+!ねぎ---------------------------------------------------
+
+
+
+!Amazonサインイン吹き出し。必要な人だけONにする
+!www.amazon.co.jp###nav-flyout-anchor
+
+!ニコ動のマイリストの連続再生ボタンと宣伝ボタン
+!www.nicovideo.jp##.buttonOuter
+!www.nicovideo.jp##.SYS_box_item_buttons
+!||nicovideo.cdn.nimg.jp/web/img/common/tilebtn/playlist.png
+!||nicovideo.cdn.nimg.jp/web/img/common/tilebtn/uad.png
+
+!５ちゃんねるのモナー
+||agree.5ch.net/mona.png
+
+!楽天：検索結果のプレミアム、学割、最安ショップを見るを消す
+!search.rakuten.co.jp##.content.tags
+!search.rakuten.co.jp##.extra.content
+
+
+
+!END

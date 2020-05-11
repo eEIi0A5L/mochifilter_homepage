@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+<link rel="stylesheet" href="/default.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マルウェア対策の考え方</title>
+<style>
+body {
+	font-family:
+		"UD デジタル 教科書体 NP-R",
+		"メイリオ",
+		"ＭＳ Ｐゴシック",
+		sans-serif;
+	line-height:1.4em;
+}
+</style>
+</head>
+<body>
+
+
+<a href="/"><img src="new8629-300x300.jpg" width="30px" height="30px">TOPに戻る</a>
+
+
+<div id="main" style="max-width: 800px;">
+<h1>マルウェア対策の考え方</h1>
+
+<p>アンチウイルスソフトについて
+<ul>
+アンチウイルスソフトをインストールして、ブロックフィルタをたくさんいれると、安全性は高まります。しかし、ネットのアクセス速度がその分遅くなれば、ネットにアクセスするたびイライラしてしまいます。年にたった一度あるかないかのウイルス感染のために、普段からイライラしながら遅いネットを使うのはバカらしいと思いませんか？ したがってネットの速度が遅くならないギリギリの範囲でウイルス対策を行うことが重要だと思います。
+</ul>
+
+<!--
+<div align="center">
+<img src="column1.jpg"/>
+</div>
+-->
+
+<p>マルウェア推奨対策
+<ul>
+<li>OSは半年ごとにクリーンインストールする</li>
+  <ul>
+  <!--
+  <li>（※１：半年が短すぎるのであれば、一年でも二年でもいいです。OSを使い続けるのではなく、たまに入れ替える心構えが重要。）</li>
+  -->
+  <li>→副次的な効果で定期的にバックアップをとるようになる。</li>
+  <li>→バックアップがあるため、PCの故障やランサムウェアが発生しても復旧できるようになる。</li>
+  </ul>
+<li>アンチウイルスソフトはWindows Defenderを使う</li>
+<li>普段使いのプロファイルと怪しいサイト用のプロファイルを使い分ける</li>
+	<ul>
+	<li>「普段使いのプロファイル」：もちフィルタで高速に。</li>
+	<li>「怪しいサイト用のプロファイル」：EasyList、豆腐フィルタ、Japanese Filterなど全部入りでがちがちに固めたプロファイル</li>
+	</ul>
+<li>Googleのウイルスオンラインチェッカー<a href="https://www.virustotal.com/en/">VirusTotal</a>を利用する</li>
+</ul>
+
+<!--
+<div align="center">
+<img src="column2.jpg"/>
+</div>
+-->
+
+<p>
+「Malware domains」について
+<ul>
+<li>uBlock Originでデフォルトで購読されている「Malware domains」（「Malware Domain List」ではない）は、Google Chromeでは不要だと思う。なぜならGoogle Chrome自体にSafe Browsing （C:\Users\ユーザ名\AppData\Local\Google\Chrome\User Data\Safe Browsing）といって、怪しいサイトをはじく仕組みが備わっているからである。これが３万行もあって、（最新マシンなら誤差範囲だが）、古いマシンで重い人は非購読にすると軽くなるかもしれません。
+</ul>
+
+
+
+<hr>
+<a href="/"><img src="new8629-300x300.jpg" width="30px" height="30px">TOPに戻る</a>
+
+<hr>
+<div class="footer">
+Twitter: <a href="https://twitter.com/mochi_adfilter">@mochi_adfilter</a><br/>
+email: <a href="mailto:mochifilter@yahoo.co.jp">mochifilter@yahoo.co.jp</a><br/>
+</div>
+
+</div>
+
+</body>
+</html>

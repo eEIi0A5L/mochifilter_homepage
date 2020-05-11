@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/default.css" type="text/css" />
+<title>ブロックフィルタの書き方（入門）</title>
+</head>
+
+<body>
+<a href="/"><img src="../new8629-300x300.jpg" width="30" height="30">TOPに戻る</a>
+
+<h1>ブロックフィルタの書き方（入門）</h1>
+
+
+①Yahooトップの右上の広告を消すことにします。</br>
+<img src="filterwriting1.jpg" border="1" style="max-width: 598px; width:100%;">
+<p>
+②広告の上で「右クリック」をしてメニューを出します。uBlockOrigin機能の「要素をブロック」を使ってもいいんですが、今回は自分でフィルタを書くのが目的なのでこれは使いません。</br>
+<img src="filterwriting2.jpg" border="1" style="max-width: 519px; width:100%;">
+<p>
+③「検証」を選択します。</br>
+<img src="filterwriting3.jpg" border="1" style="max-width: 429px; width:100%;">
+<p>
+④すると要素の検証ウィンドウが表示されるので、ここでブロックする要素を調べることになります。デフォルトで&lt;img&gt;が選択されているのでこの&lt;img&gt;をブロックしてもいいのですが、ちょっと上に&lt;script&gt;の要素があるのが見えるでしょうか？このスクリプトもまとめてブロックしてしまいましょう。</br>
+<img src="filterwriting4.jpg" border="1" style="max-width: 1076px; width:100%;">
+<p>
+⑤要素を上の方に見ていくと、ちょうどid="brandpanel"がこの広告全体をさす要素であることがわかります。この上のid="main"を選択するとページ中央が選択されてしまうのがわかると思います。</br>
+<img src="filterwriting5.jpg" border="1" style="max-width: 1112px; width:100%;">
+<p>
+⑥要素がわかったので、実際にフィルタに書き込みます。マイフィルタを開いて「www.yahoo.co.jp###brandpanel」と書きます。フィルタの書き方は全て<a href="https://adblockplus.org/filters">ここ</a>にかかれていますので、適時参照してください。idの要素を消す場合は、要素を意味する「##」とidを意味する「#」で#３個です。classの要素を消す場合は、要素を意味する「##」とclassを意味する「.」一つで「##.」です。<a href="http://www.htmq.com/csskihon/005.shtml">cssのセレクタ</a>と同じ書き方なのでわかりやすいですね。</br>
+<img src="filterwriting6.jpg" border="1" style="max-width: 428px; width:100%;">
+<p>
+⑦Yahooトップを開き直すと、広告が消えました！</br>
+<img src="filterwriting7.jpg" border="1" style="max-width: 413px; width:100%;">
+<p>
+⑧お疲れ様でした。</br>
+<br/>
+
+<hr>
+<a href="/"><img src="../new8629-300x300.jpg" width="30" height="30">TOPに戻る</a>
+
+</body>
+
+</html>

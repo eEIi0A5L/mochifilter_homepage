@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youtubeサムネイル取得機</title>
+
+<style>
+/* Article Table */
+.artiTable {
+ width:95%;
+ margin: 0 auto;
+}
+
+.artiTable th,td {
+ border: 1px solid #ddd;
+ padding: 5px;
+}
+
+.artiTable th {
+ text-align:center;
+ font-weight: bold;
+}
+
+.artiTable.custom th,
+.artiTable.custom td {
+ text-align:center;
+ vertical-align:middle;
+} 
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+<h1>Youtubeのサムネイルを取得するツール</h1>
+<form id="text-form" action="">
+	<fieldset>
+		<legend accesskey="T">サムネイルを取得するYoutube動画のURL</legend>
+		<textarea name="text" rows="1" cols="60" tabindex="1" accesskey="U" placeholder="https://www.youtube.com/watch?v=XXXXXXXXXXX"></textarea>
+		<input type="submit" value="サムネイル取得" />
+	</fieldset>
+</form>
+
+<table class="artiTable custom">
+<thead>
+<tr>
+<th>画像</th>
+<th>サイズ</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="default" href="" target="_blank" ><img id="default_img" class="lazy lazy-hidden aligncenter size-full wp-image-1012" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="default" width="120" height="auto" /></a></td>
+<td>120&#215;90</td>
+<td id="default_url" ></td>
+</tr>
+<tr>
+<td><a id="1" href="" target="_blank" ><img id="1_img" class="lazy lazy-hidden aligncenter size-full wp-image-1014" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="1" width="120" height="auto" /></a></td>
+<td>120&#215;90</td>
+<td id="1_url"></td>
+</tr>
+<tr>
+<td><a id="2" href="" target="_blank"><img id="2_img" class="lazy lazy-hidden aligncenter size-full wp-image-1015" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="2" width="120" height="auto" /></a></td>
+<td>120&#215;90</td>
+<td id="2_url"></td>
+</tr>
+<tr>
+<td><a id="3" href="" target="_blank"><img id="3_img" class="lazy lazy-hidden aligncenter size-full wp-image-1016" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="3" width="120" height="auto" /></a></td>
+<td>120&#215;90</td>
+<td id="3_url"></td>
+</tr>
+<tr>
+<td><a id="mqdefault" href="" target="_blank"><img id="mqdefault_img" class="lazy lazy-hidden aligncenter size-full wp-image-1017" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="mqdefault" width="120" height="auto"/></a></td>
+<td>320&#215;180</td>
+<td id="mqdefault_url"></td>
+</tr>
+<tr>
+<td><a id="hqdefault" href="" target="_blank"><img id="hqdefault_img" class="lazy lazy-hidden aligncenter size-full wp-image-1018" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="hqdefault" width="120" height="auto" /></a></td>
+<td>480&#215;360</td>
+<td id="hqdefault_url"></td>
+</tr>
+<tr>
+<td><a id="0" href="" target="_blank"><img id="0_img" class="lazy lazy-hidden aligncenter size-full wp-image-1019" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="0" width="120" height="auto" /></a></td>
+<td>480&#215;360</td>
+<td id="0_url"></td>
+</tr>
+<tr>
+<td><a id="sddefault" href="" target="_blank"><img id="sddefault_img" class="lazy lazy-hidden aligncenter size-full wp-image-1020" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="sddefault" width="120" height="auto" /></td>
+<td>640&#215;480</td>
+<td id="sddefault_url"></td>
+</tr>
+<tr>
+<td><a id="maxresdefault" href="" target="_blank"><img id="maxresdefault_img" class="lazy lazy-hidden aligncenter size-full wp-image-1021" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" alt="maxresdefault" width="120" height="auto" /></td>
+<td>1280&#215;720</td>
+<td id="maxresdefault_url"></td>
+</tr>
+</tbody>
+</table>
+
+</body>
+
+
+<script type="text/javascript">
+<!--
+// 下記参考にしたページ
+// http://so-zou.jp/web-app/text/encode-decode/
+( function()
+{
+	var form = document.getElementById( 'text-form' );
+	form.text.select();
+	form.onsubmit = function()
+	{
+		var text = this.text.value; // テキストボックスの値
+
+		var youtube_id = get_youtube_id( text );
+
+		set_img( youtube_id, 'default');
+		set_img( youtube_id, '1');
+		set_img( youtube_id, '2');
+		set_img( youtube_id, '3');
+		set_img( youtube_id, 'mqdefault');
+		set_img( youtube_id, 'hqdefault');
+		set_img( youtube_id, '0');
+		set_img( youtube_id, 'sddefault');
+		set_img( youtube_id, 'maxresdefault');
+
+
+		return false;
+	}
+	function set_img( youtube_id, type) {
+		var imgtype = type + "_img";
+		var urltype = type + "_url";
+		
+		//alert(type);
+		//alert(urltype);
+		
+		var alink = document.getElementById( type );
+		//var str = text;
+		var imgurl = "https://i.ytimg.com/vi/" + youtube_id + "/" + type + ".jpg";
+		//alert(imgurl);
+		alink.href = imgurl;
+
+		var img = document.getElementById( imgtype );
+		img.src = imgurl;
+
+		var td_url = document.getElementById( urltype );
+		td_url.innerHTML  = imgurl;
+	}
+
+	//https://www.youtube.com/watch?v=56WBK4ZK_cw&feature=youtu.be
+	//https://youtu.be/56WBK4ZK_cw
+	function get_youtube_id( text ) {
+		var ret = "";
+		var result = text.match( /.*\?v=([^&\?]*)/ );
+		if ( result != null ) {
+			ret = result[1];
+			return ret;
+		}
+
+		result = text.match( /youtu\.be\/([^&\?]*)/ );
+		if ( result != null ) {
+			ret = result[1];
+			return ret;
+		}
+
+
+		//alert(ret);
+		return ret;
+	}
+
+
+
+
+
+})();
+// -->
+</script>
+
+</html>

@@ -1,0 +1,14 @@
+*.obj
+tmp.txt
+patch.diff
+a
+*.swp
+template.txt
+10一旦コミット.txt
+20TEMPLATE.txt
+sable_filter.txt
+sable_revervation.txt
+sable_reservation.txt
+a.txt
+*~
+00old

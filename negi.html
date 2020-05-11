@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/default.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ねぎフィルタ（広告以外の不要要素ブロック）</title>
+
+
+
+
+</head>
+
+<body>
+<a href="/"><img src="new8629-300x300.jpg" width="30" height="30">TOPに戻る</a>
+
+<h1>ねぎフィルタ（広告以外の不要要素ブロック）</h1>
+
+<ul class="cbox filter">
+  <li class="filter-li"><strong class="filter-button"><a href="abp:subscribe?location=https://raw.githubusercontent.com/eEIi0A5L/adblock_filter/master/negi_filter.txt&amp;title=ねぎフィルタ（広告以外の不要要素ブロック）">フィルタを購読する</a></strong>(github)</li>
+  <li class="filter-li">(<a href="https://raw.githubusercontent.com/eEIi0A5L/adblock_filter/master/negi_filter.txt">中身を見る</a>)(github)</li>
+</ul>
+
+<h3>想定している使用方法</h3>
+<ul>
+<li>パターン１：ねぎフィルタ＋豆腐フィルタ＋EasyList</li>
+<li>パターン２：ねぎフィルタ＋<a href="mochi.html">もちフィルタ</a></li>
+</ul>
+
+<h3>ねぎフィルタの特徴</h3>
+<ul>
+<li><span class="highlight">広告以外の</span>目障りな表示がブロック対象になっています</li>
+<li>サイズが小さい</li>
+<li>豆腐フィルタ、もちフィルタにちょっと付け足しをするのがこのねぎフィルタの目的。（豆腐にねぎを乗せて食べるとおいしい）</li>
+<li>対応サイト：</li>
+<ul>
+<li>Abema：動画を見はじめて５分後ぐらいに表示される画面左下のスティッカー</li>
+<li>Abema：Firefoxで見たときに表示される「推奨環境ではありません」</li>
+<li>ニコ生＋ニコ動：ニコ動画面上部のニュース、プレミアム</li>
+<li>Weblio：プレミアム＋高速化</li>
+<li>Yahoo!Japan：ショッピングを開いた時の全面ポップアップ</li>
+<li>Google：クッキーが無い場合に右上に「こちらをよくアクセスする方はホームページに設定してください。」が表示される問題</li>
+<li>Cnn.co.jp：高速化</li>
+<li>他</li>
+</ul>
+</ul>
+
+<h3>例外の書き方</h3>
+<ul>
+<li>必要ないフィルタは自分で<span class="highlight">例外フィルタ</span>を書くことで例外にできます。</li>
+<li>まず、前知識として、アドブロックには下記二種類のフィルタ表記があります。</li>
+	<ul>
+	<li><span class="highlight">ブロック表記</span>（通信そのものをブロックする）：＜URLの一部＞</li>
+		<ul>
+		<li>例：||ai.yimg.jp/images/search/slink/popup/pc/1.0.0/js/popsearch.min.js</li>
+		</ul>
+	<li><span class="highlight">要素隠蔽表記</span>（通信はするが表示時に非表示にする）：＜ホスト名＞##＜cssセレクタ＞</li>
+		<ul>
+		<li>例：www.yahoo.co.jp##.commerceBanner</li>
+		</ul>
+	</ul>
+<li><span class="highlight">「ブロック表記」</span>を例外にする場合は、<span class="highlight">フィルタの先頭に「@@」</span>を付けます。</li>
+<li><span class="highlight">「要素隠蔽表記」</span>を例外にする場合は、<span class="highlight">「##」を「#@#」に変更</span>します。</li>
+<li>例：「||ai.yimg.jp/images/search/slink/popup/pc/1.0.0/js/popsearch.min.js」を自分では使わない場合、</li>
+<li>自分のマイフィルタに「<span class="highlight">@@</span>||ai.yimg.jp/images/search/slink/popup/pc/1.0.0/js/popsearch.min.js」と書きます。</li>
+<li>例：ねぎフィルタに書かれている「www.yahoo.co.jp<span class="highlight">##</span>.commerceBanner」を自分では使わない場合</li>
+<li>自分のマイフィルタに「www.yahoo.co.jp<span class="highlight">#@#</span>.commerceBanner」と書きます。</li>
+<li>すると例外処理され、自分ではそのフィルタが存在しない振る舞いになります。</li>
+<li>フィルタの詳細は、<a href="https://adblockplus.org/filters">Writing Adblock Plus filters</a>参照。</li>
+</ul>
+
+<p>
+<a href="https://jbbs.shitaraba.net/internet/24461/">ねぎフィルタ掲示板</a>（名無し掲示板）
+
+<hr>
+<a href="/"><img src="new8629-300x300.jpg" width="30" height="30">TOPに戻る</a>
+
+
+<hr>
+<div class="footer">
+Twitter: <a href="https://twitter.com/mochi_adfilter">@mochi_adfilter</a><br/>
+email: <a href="mailto:mochifilter@yahoo.co.jp">mochifilter@yahoo.co.jp</a><br/>
+</div>
+
+</body>
+
+</html>

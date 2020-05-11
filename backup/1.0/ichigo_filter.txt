@@ -1,0 +1,1050 @@
+[Adblock Plus 2.0]
+! Title: いちごフィルタ（Xサイト広告ブロック）
+! Last modified: 24 Sep 2019 00:00 JST
+! Expires: 6 hours (update frequency)
+! Homepage: https://pokapoka.shoooter.net/ichigo.html
+! 
+! 
+
+!xvideos
+*$websocket,domain=xvideos.com
+||google.co.jp/gen_204?$other
+||google.com/gen_204?$other
+xvideos.com###main > [id]:has(a[href^="https://main.trafficfactory.biz/"])
+!/ad/$domain=xvideos.com
+||www.iwanttodeliver.com^
+||xvideos.com/in.php?
+xvideos.com###page.video-page > [id]:has(a[href^="https://main.trafficfactory.biz/"])
+xvideos.com##.subscribe-feed
+||www.mmaaxx.com^
+|https://$third-party,script,domain=xvideos.com
+xvideos.com##+js(abort-on-property-write.js, openpop)
+xvideos.com##+js(nowebrtc.js)
+xvideos.com##+js(xvideos.com.js)
+@@||xvideos-cdn.com^$xmlhttprequest,domain=xvideos.com
+xvideos.com##+js(window.open-defuser.js)
+!https://www.reddit.com/r/uBlockOrigin/comments/8ehkjc/xvideos_dont_show_anything/
+xvideos.com#@#[src*="blob:"]
+xvideos.com#@#[style*="display: block;"]
+||trafficfactory.biz^
+!/ad/$domain=www.xvideos.com
+www.xvideos.com###ad-footer
+www.xvideos.com###video-ad
+www.xvideos.com##.text-ad
+www.xvideos.com##.text-ad-links
+www.xvideos.com##.text-ads
+
+!xHamster
+*$websocket,domain=xhamster.com
+@@||xhcdn.com^$script,domain=xhamster.com
+/advideo.$domain=xhamster.com
+||rotator.trafficstars.com^
+||cdn.trafficstars.com^
+||xhamster.com/cnt.php?
+||xhamster.com/stats/
+xhamster.com##.avdo
+xhamster.com##.socials-container
+xhamster.com##[id$="Ads"]:not(body)
+||trafficstars.com^$third-party
+||xhcdn.com^*/ads_$domain=xhamster.com
+@@||cdn.trafficstars.com/sdk/v1/bi.js$domain=xhamster.com
+^sponsor-$domain=static-ec.xhcdn.com
+xhamster.com##.sponsorB
+xhamster.com##.sponsorTitle
+!||xhamster.com^$subdocument
+!||trafficstars.com^$third-party
+/banner.stats?$domain=xhamster.com
+!xhamster.com##div > noscript + div[style
+xhamster.com##div[style^="width: 330px"]
+xhamster.com##.player-ad-overlay
+xhamster.com##.banner-container
+xhamster.com##+js(abort-on-property-write.js, dataPopUnder)
+!||cdn.tsyndicate.com^$domain=xhamster.com
+jp.xhamster.com##.ads-div
+xhamster.com##+js(addEventListener-defuser.js, popstate, backUrl)
+xhamster.com##div[style*="adVideo"]:style(position: absolute!important; left: -3000px!important;)
+||collector1.xhamster.com^
+||xhamster.com/ajax/wid-cams-widget/
+xhamster.com##.addThis
+xhamster.com##iframe[src^="https://xhamsterpremium.com/"]
+xhamster.com##.wid-banner-container
+xhamster.com##.wid-cams-widget
+xhamster.com##.wid-spot-container
+
+
+!おらばうと
+||puhtml.com^
+||js.users.51.la^
+@@||www.2121.club^
+||88files.net/resources/js/bootstrap.min.js
+||dioimg.net/images/
+||mws3034.tk^
+||crpt.livejasmin.com＾
+!おらばうと
+!img588.net
+||69.28.57.245:999/2007/760x60.gif
+||dzy2017.pw^
+||dh.10242016.info^
+
+
+!99files.net
+!||wx2.sinaimg.cn/large/
+||wx2.sinaimg.cn/large/$third-party
+99files.net##.ad1
+||www.fhyl02.com^
+
+
+!imagetwist.com
+||.com/ga.js
+!||ads.exoclick.com^
+/adblock_detector2.$domain=imagetwist.com
+||www.statcounter.com^
+imagetwist.com###adbdiv
+imagetwist.com##[href^="http://www.sex.com/pics/?utm_"]
+imagetwist.com##[href^="http://www.sex.com/videos/?utm_"]
+||bongacams.com^$third-party
+||imagetwist.com$inline-script
+
+
+!www.imgbabes.com
+!||c1.popads.net^
+||creative.wwwpromoter.com^
+||imgbabes.com/element.js
+||imgbabes.com^*/splash.php$domain=www.imgbabes.com
+/topads.$domain=imgbabes.com
+imgbabes.com##div[style="width:604px; height:250px; background:#241521; padding:4px 3px 4px 3px; margin-top:-5px; margin-bottom:-8px; -moz-border-radius:2px; border-radius:2px; -webkit-border-radius:2px;"]
+!||syndication.exoclick.com^
+
+!imgflare.com
+||imgflare.com^*/splash.php$domain=imgflare.com
+/topads.$domain=imgflare.com
+||imgflare.com/exo.html
+imgflare.com###fadeinbox
+imgflare.com##.f_social
+imgflare.com##.t_social
+imgflare.com##div[style^="width:604px; height:250px;"]
+
+!88files.net
+||js.users.51.la^
+88files.net##.ad1
+||bmw999888.com^
+||jxf0088.com^
+!||wx1.sinaimg.cn^
+||wx1.sinaimg.cn^$third-party
+||www.fhyl04.com^
+||dioimg.net^$domain=88files.net
+||shen2211.com^$popup
+!||88files.net^$popup
+!||www.cccc555.net^
+||www.cccc555.net^$popup
+
+!rocks
+!||wx3.sinaimg.cn/large/*.gif$domain=rocks
+||wx3.sinaimg.cn/large/*.gif$third-party,domain=rocks
+!||wx3.sinaimg.cn^
+||wx3.sinaimg.cn^$third-party
+||www.7893com.com/img/amdc.gif
+||www.7893com.com^
+||dh.10242016.com^
+
+!dioguitar23s.jd233...p
+||diopic.net/images/
+||p.picuphost.com^
+||www.2048dh.pw^
+
+!pornhub
+||smpop.icfcdn.com/smpop-stable.js$script
+||ci.phncdn.com/www-static/js/ph-tracking.js?
+!http://egg.5ch.net/test/read.cgi/software/1554721271/714
+!https://www.reddit.com/r/uBlockOrigin/comments/byd13w/pornhubs_related_videos_right_side_panel_is_gone/?ref=readnext
+!||trafficjunky.net^$important,third-party
+||trafficjunky.net^$third-party
+@@||media.trafficjunky.net/__js/test.js$domain=pornhub.com
+pornhub.com##iframe[style="width: 326px; height: 311px;"]
+pornhub.com##+js(pornhub-popup-defuser.js)
+pornhub.com##+js(pornhub-sanitizer.js)
+pornhub.com##+js(abort-on-property-write.js, AdDelivery)
+pornhub.com##+js(abort-on-property-write.js, rAb)
+!pornhub.com##+js(csp.js, img-src 'self' *; media-src 'self' *)
+pornhub.com##+js(addEventListener-defuser.js, DOMContentLoaded, [native code])
+pornhub.com##+js(abort-on-property-write.js, UAParser)
+pornhub.com##+js(abort-on-property-write.js, isAdblockOn)
+pornhub.com##+js(abort-on-property-read.js, smpop)
+||google-analytics.com/analytics.js$important,script,domain=pornhub.com
+||phncdn.com/iframe
+pornhub.com##.playerFlvContainer > div#pb_template[style]:style(position: absolute!important; left: -3000px!important;)
+pornhub.com##.video-wrapper > div#player~div[class$=" hd clear"]:style(position: absolute!important; left: -3000px!important;)
+pornhub.com##iframe[title*="Campaign"]:style(position: absolute!important; left: -3000px!important;)
+pornhub.com###abAlert
+pornhub.com##.realsex
+pornhub.com##.sectionWrapper > div.sectionTitle+div[class*=" "]:not([class="sectionTitle"]):not([class="reset"]):not([class="gifsWrapper "])
+pornhub.com##.sectionWrapper > div[class*=" "]:has(:scope > div[class]:only-child > a.removeAdLink)
+pornhub.com##.sectionWrapper > div[class]:has(:scope > div > .ad-link)
+pornhub.com##body > .wrapper + div[class]:has(:scope > .removeAdLink)
+pornhub.com##.ad-link
+pornhub.com##.removeAdsStyle
+pornhub.com###hAd
+pornhub.com##.playerFlvContainer > div#pb_template[style]
+||hubt.pornhub.com/js/ht.js?site_
+pornhub.com##.adWrapper
+!pornhub.com##.sectionWrapper > .videos > li:not(.videoblock):not(.videobox)
+||cbbp1.com^$document
+||cbbp1.com^$popup
+pornhub.com##.premiumPromoBannerWrapper
+pornhub.com##.sniperModeEngaged.alpha
+
+
+!bobx.com
+||img.bobx.com/x_images/vids4.jpg
+||img.bobx.com/video_wave3.gif
+!||www.osakagirls.com^
+!##.smallblack
+||www.osakagirls.com/adultsonly.html
+||www.bobx.com/dark/new.gif
+||img.bobx.com/doggy.gif
+
+
+!img588
+||img588.net/imgads/
+||img588.net/images/*.gif$domain=img588.net
+
+!rmdown.com
+||www.856789.com/images/
+||www.love520.cc/img
+
+!en.ero-video.net
+!バナー
+||static.javhd.com/h5/files/.*/728x90.html$domain=en.ero-video.net
+||static.javhd.com/h5/files/.*/160x600.html$domain=en.ero-video.net
+||en.ero-video.net/advert/bannerFrame.html?id=
+||en.ero-video.net/advert
+
+!www5.javmost.com
+||popmyads.com^
+||adsco.re^
+!||adserver.juicyads.com^
+||popads.net^
+!server2
+syndication.exosrv.com##body
+||vebadu.com^
+avgle.com##.grecaptcha-badge
+avgle.com##.vjs-poster
+||www5.javmost.com/assets/img/50-750.gif
+
+
+!rocks
+||.rocks/htmm/2020.php$popup
+!グラブルが起動しなくなる
+!about:blank$popup
+
+!TOKYOMOTION
+www.tokyomotion.net###nuevoa
+
+!ero-video.net
+||affiliate.dtiserv.com/image/carib/
+ero-video.net###scroll-cont
+ero-video.net##.base__adverts
+
+!6movie.blog.fc2.com
+!||mediad2.jp/ad/js/pjs.js
+||adv.livelog.biz^
+6movie.blog.fc2.com##.ad
+||google-analytics.com/analytics.js$script,domain=6movie.blog.fc2.com,redirect=google-analytics.com/analytics.js
+6movie.blog.fc2.com##.video-wrap0
+
+!tube8
+tube8.*##+js(pornhub-popup-defuser.js)
+tube8.com##+js(abort-on-property-write.js, AdDelivery)
+tube8.com##+js(abort-on-property-write.js, IS_ADBLOCK)
+tube8.com##+js(abort-on-property-write.js, loadAdFromHeaderTab)
+tube8.com##+js(abort-on-property-read.js, _goat)
+tube8.com##+js(abort-on-property-write.js, rAb)
+||etahub.com^$third-party
+!||trafficjunky.net^$important,third-party
+||trafficjunky.net^$third-party,domain=tube8.com
+tube8.com###right_side_ad_wrapper
+@@||t8cdn.com^$image,domain=tube8.com|tube8.es|tube8.fr
+tube8.*##^script:has-text(adblock)
+@@||t8cdn.com^$media,domain=tube8.com|tube8.es|tube8.fr
+@@||tube8.com/ajax2/$xmlhttprequest
+@@||es.t8cdn.com^
+tube8.com###pb_template
+tube8.com##+js(abort-on-property-write.js, rAb)
+||ht.tube8.com^
+tube8.com###adBlockAlert
+tube8.com###adBlockAlertWrap
+tube8.com###hAd
+tube8.com###home-button
+tube8.com###main-nav > li > a[rel="nofollow noopener"][onclick^="pageTracker"]
+tube8.com###shareMenu
+tube8.com##.follow-channel
+tube8.com##.g-plusone
+tube8.com##.gridBanner
+tube8.com##.gototop
+
+!babycondom.com
+babycondom.com###overlay-advertising
+
+!video.fc2
+||video.fc2.com/adPlayer.php?
+||video.fc2.com/a/pagead/
+||mediad2.jp/ad/
+||media.fc2.com^
+||cdn.ad.maist.jp^
+||aimg.fc2.com^
+!video.fc2.com###content_ad_head_wide
+video.fc2.com##.ad_head_wide
+video.fc2.com##div.main_ad_head_wide:style(padding-top: 0px !important;)
+!video.fc2.com###ad_side_wrap2
+!video.fc2.com###ad_side_wrap2:style(padding-top: 0px !important;)
+video.fc2.com###ad_side_wrap2
+video.fc2.com###videoplayer_ad
+video.fc2.com##.cont_v2_ad
+||textad.net/cgi-bin/manager.cgi
+video.fc2.com##.c-ad-103
+video.fc2.com##.u-hasAd-101_adArea
+!fc2動画アダルト
+!video.fc2.com##.c-ad-101
+
+!youav.com
+!||www.youav.com$popup
+||www.youav.com$popunder
+!||popads.net/pop.js^$important
+!||addthis.com^$important,third-party
+!||popads.net/pop.js^
+||addthis.com^$third-party,domain=youav.com
+!||ads.adxpansion.com^
+||jwpltx.com^
+www.youav.com##.ad-body
+||www.youav.com/nb/bnl.php?
+*$third-party,script,domain=youav.com
+||thterras.com/apu.php?$important
+youav.com##a[href^="https://watchmygirlfriend.tv/"]
+||s20dh7e9dh.com^$third-party
+youav.com##.afs_ads
+@@||jquery.com^$script,domain=youav.com
+youav.com##.well + script + div
+
+
+!thisav
+||www.thisav.com/cdn-cgi/apps/head/$first-party,script
+||ads.exosrv.com^
+!||s10.histats.com^
+thisav.com##.ads
+thisav.com##a[href*="click.dtiserv2.com"]
+!||popads.net/pop.js^$important
+!||popads.net/pop.js^
+||thisav.com/player/video-js-banner/
+||cdn.thisav.com/player/video-js-vast-vpaid/videojs_5.vast.vpaid.js?4
+||javhd.com^$third-party
+!||addthis.com^$important,third-party
+||addthis.com^$third-party
+!||ads.adxpansion.com^
+||thisav.com/index.js
+||www.zbecpoboc.com/jxc.js
+thisav.com###share_to
+||chaturbate.com^
+!全画面pop
+||hxwxxhfydbifuq.com^$third-party
+||thisav.com/0628.
+||thisav.com/js/pu.js
+||thisav.com/js/thisav_pop.js
+||goo.gl^$popup,domain=thisav.com
+||areyouahuman.com^$third-party
+/:\/\/www\.([a-z]{6,16})\.com\/([a-z]{1,4})\.js$/$third-party,script
+!/cdn-cgi/apps/head/$first-party,script
+||icapabloidsety.club^$third-party
+||9nwg9sib9e.com^
+||trafficshop.com^$third-party,popup
+||hdpreview.com^$third-party
+
+!movie.eroterest.net
+!||eroimg.net/images/kok/u-next_300250.gif
+!movie.eroterest.net##.row
+movie.eroterest.net##.kokArea
+||eroimg.net/images/kok/
+movie.eroterest.net##.adAreaNativ
+movie.eroterest.net##.row:has(> .col-md-6.adAreaNativeDmm)
+||static.eroterest.net/kok/
+movie.eroterest.net##.adMgsBanner
+
+!http://play.movie-time.net
+||rcm.shinobi.jp^
+||shinobi.jp/ufo/
+||kok.eroterest.net^
+
+!Javynow
+||ads.medi-8.net^
+||koukoku.red^
+||ams.exad.jp/ad/js/pjs.js
+||ams.exad.jp^
+!||js.aaddcount.com^
+lovechat777.blog.fc2.com##.eroterest_partsv2
+lovechat777.blog.fc2.com##.contentsboxin a
+lovechat777.blog.fc2.com###leftside
+lovechat777.blog.fc2.com###rightside
+
+!http://kaikangakuen.xyz/
+||for-ward.jp^
+||eroterest.net^$third-party
+||fam-ad.com^
+||js.sprout-ad.com^
+||rcm.shinobi.jp^
+||kok.eroterest.net/mgsRecommend/?affid=
+||js.octopuspop.com^
+||js.click-plus.net^
+||aaddcount.com^
+
+!www.tokyo-tube.com
+||pic.tokyo-tube-ad.com^
+
+!http://beautyandbig.blog.fc2.com
+||ad.duga.jp^
+
+!XNXX
+||iwanttodeliver.com^$popup
+@@||xvideos.com^$third-party
+||xnxx.com/in.php?referer
+xnxx.com##+js(xvideos.com.js)
+
+!youporn.com
+||youporn.com/vast/adt_vast.js
+||youporn.com/nbsys3/fsyspp.js
+||ads.exosrv.com^
+||puserving.com^
+||syndication.exosrv.com^
+youporn.com##+js(noeval.js)
+youporn.com##+js(abort-on-property-write.js, Fingerprint2)
+
+!mypron.tv
+||ads2.contentabc.com^
+||cdn1.mypron.tv/xjs/advertisement.js
+mypron.tv##iframe[width="300"][height="250"]
+mypron.tv##.lextra
+mypron.tv##.lextraleftmoreads
+mypron.tv###groupedlist
+||ox2.mypron.tv^
+||mypron.tv/js/xp/pt.js?
+mypron.tv##.ifab
+
+!bitporno
+bitporno.com##+js(window.open-defuser.js)
+bitporno.com##+js(popads.net.js)
+bitporno.com##+js(nowebrtc.js)
+bitporno.com##+js(abort-current-inline-script.js, atob, tabunder)
+
+!vidoza
+*$csp=worker-src 'none',domain=estream.to|streamango.com|vidoza.net|vidto.me|vidtudu.com
+@@||vidoza.net^$generichide
+vidoza.net##+js(window.open-defuser.js)
+vidoza.net##+js(noeval.js)
+||tagbucket.cc^
+@@||vidoza.net/js/pop.js
+@@||vidoza.net/js/ads.js
+
+!openload
+openload.co##+js(openload.co.js)
+openload.co##+js(nano-setInterval-booster.js)
+openload.co##+js(window.open-defuser.js)
+*$csp=default-src 'self' * data: 'unsafe-inline' 'unsafe-eval',domain=101greatgoals.com|openload.co
+||openload.co/cdn-cgi/apps/head/
+||cdn.acloudvideos.com/video_ads/
+
+!javfinder
+||aoredi.com/apu.php?
+!||whos.amung.us^
+||traffic-media.co.uk^$third-party
+fembed.com##+js(abort-on-property-write.js, _pop)
+javfinder.sh##.to-top
+javfinder.sh##.row > .col-xs-12:first-child
+||b54m4qbmt0b9.com^
+javfinder.sh##[id*="ScriptRoot"]
+javfinder.sh##div[id*="ScriptRootC"]
+.com/?zoneid=$popup,domain=javfinder.sh
+||trafficjunky.com^$third-party,domain=javfinder.sh
+||k77hof1z7k.com^$third-party
+||google-analytics.com/analytics.js$important,script,domain=javfinder.sh
+!AnimeFLVでプレイヤーの一時停止アイコンが出ない
+!||jwpcdn.com^
+||mc.yandex.ru^
+@@||p.jwpcdn.com^$third-party,script
+@@||rapidvideo.com^$script,domain=rapidvideo.com
+@@||rapidvideo.com/js/jquery.validate.min.js$script
+@@||rapidvideo.com/js/jquery-ui.min.js$script
+@@||rapidvideo.com/js/jquery.limit-1.2.source.js$script
+@@||rapidvideo.com/js/jquery.tipsy.js$script
+@@||rapidvideo.com/js/js.cookie.js$script
+@@||rapidvideo.com/js/new.js$script
+@@||rapidvideo.com/jw-logo/jw-logo-bar.js$script
+!@@||rapidvideo.com^$script,domain=rapidvideo.com
+@@||rapidvideo.com/tube-skin-retina-for-videojs-6/bin/video-js-*/video.min.js$script
+@@||rapidvideo.com/js/videojs.hotkeys.min.js$script
+javfinder.sh###pauseroll
+javfinder.sh###preroll
+javfinder.sh##.afs_ads
+!||cdn.onesignal.com^
+||mn1nm.com^$third-party
+||clcknads.pro^$third-party
+javfinder.sh##+js(abort-on-property-read.js, AaDetector)
+||jsc.adskeeper.co.uk^
+javfinder.sh###external-embed:style(display: block!important;)
+||a.o333o.com^
+||cdnfast.me/img/movie/20181016/fc2-ppv-
+||javwide.com/underpl.js
+javfinder.sh###preroll_ads
+||keqi7dh3df.com^
+||fabrkrup.com^$third-party
+||cdn.o333o.com^
+!javfinder.sh##.afs_ads
+javfinder.sh##iframe[src="https://avsex.me/js/pc.html"]
+||amung.us^
+||k77hof1z7k.com^
+javfinder.sh##iframe[width="300"][height="250"]
+||ssdsylfzav.com^$third-party
+javfinder.sh##iframe[width="728"][height="90"]
+/^https?:\/\/([a-z0-9]{8,10}\.)?[a-z0-9]{5,14}\.(com|bid|online|top|club)\/([a-z0-9]{2}\/){3}[a-f0-9]{32}\.js$/$third-party,script,domain=javfinder.sh|embed.media
+!javfinder.sh##.afs_ads
+javfinder.sh##img[width="728"][height="90"]
+||rlomrjxrpsev.com^$third-party
+@@/js/ads.js$script,domain=javfinder.sh
+javfinder.sh##+js(setTimeout-defuser.js, _0x)
+/^https?:\/\/[a-z0-9]{5,14}\.(com|bid|online|top|club)\/[0-9a-f]{32}\/invoke.js$/$third-party,script,domain=javfinder.sh
+!javfinder.sh##.afs_ads
+||google-analytics.com/analytics.js$important,script,domain=javfinder.sh
+||googletagmanager.com^$domain=javfinder.sh
+||zarlomgog.com/get/1551789?zoneid=
+embed.media##.afs_ads
+
+
+!popjav
+||adexchangecloud.com^
+rapidvideo.com##+js(abort-current-inline-script.js, atob, tabunder)
+rapidvideo.com##+js(abort-current-inline-script.js, parseInt, tabunder)
+rapidvideo.com##+js(abort-on-property-write.js, executed)
+rapidvideo.com##+js(noeval.js)
+rapidvideo.com##+js(popads.net.js)
+popjav.com##.video_ad
+popjav.com###right_ad
+popjav.com###left_ad
+||ujlpbcsx.com^$third-party
+||mvvecbfomk.com^$third-party
+||go.onclasrv.com/apu.php?$important
+/^https?:\/\/([a-z0-9]{8,10}\.)?[a-z0-9]{5,14}\.(com|bid|online|top|club)\/([a-z0-9]{2}\/){3}[a-f0-9]{32}\.js$/$third-party,script,domain=popjav.tv
+||wjevvjxwg.com^$third-party
+popjav.tvpopjav.tv##.bottomad
+popjav.tv###preroll_ads
+popjav.tv##.video_ad
+
+!hpjav
+!||adserver.juicyads.com^
+||pvclouds.com^
+||mvvecbfomk.com^$third-party
+||ujlpbcsx.com^$third-party
+!hpjav.tv###artdv98
+!hpjav.tv##div:has(> a[href^="http://cl96rwprue.com/"])
+hpjav.tv##div[style^="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px;"]
+||fkbwtoopwg.com^
+hpjav.tv##+js(abort-on-property-read.js, AaDetector)
+/^https?:\/\/([a-z0-9]{8,10}\.)?[a-z0-9]{5,14}\.(com|bid|online|top|club)\/([a-z0-9]{2}\/){3}[a-f0-9]{32}\.js$/$third-party,script,domain=hpjav.tv
+hpjav.tv##.poplayer
+hpjav.tv##.video-boxad
+hpjav.tv##.center-ad
+hpjav.tv##.bottom-ad
+hpjav.tv###preroll_ads
+hpjav.tv##iframe[width="728"][height="90"]
+hpjav.tv##iframe[width="300"][height="250"]
+!hpjav.tv##+js(abort-on-property-read.js, AaDetector)
+!/^https?:\/\/([a-z0-9]{8,10}\.)?[a-z0-9]{5,14}\.(com|bid|online|top|club)\/([a-z0-9]{2}\/){3}[a-f0-9]{32}\.js$/$third-party,script,domain=hpjav.tv
+!hpjav.tv##.bottom-ad
+!hpjav.tv##.center-ad
+hpjav.tv##.home-ad
+||hpjav.tv/asset/js/vast.js
+@@||tsyndicate.com^$third-party,domain=hpjav.tv
+tsyndicate.com##a[href*="/ad/"]
+||cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads
+verystream.com##+js(abort-on-property-read.js, adblock)
+verystream.com##+js(abort-on-property-read.js, open)
+
+!javmost
+||pussl48.com^
+@@||qooqlevideo.com/videoplayback?sparams=*&source=$domain=avgle.com
+!||ads.juicyads.com^
+||avgle.com/templates/frontend/p2p.js
+@@||ads.exosrv.com/ads.js$domain=avgle.com
+@@||avgle.com/avideos.js
+||avgle.com/cdn-cgi/apps/head/
+avgle.com##+js(abort-on-property-read.js, ExoDetector)
+avgle.com##+js(abort-on-property-write.js, Fingerprint2)
+avgle.com##+js(set-constant.js, checkThings, trueFunc)
+||aoredi.com/apu.php?$important
+||static.hotjar.com^
+javmost.com##div[style="width:100%; height: 100px;overflow: hidden !important;"]
+
+!av01
+!コンテンツブロックをOFFにすること
+@@/wp-content/plugins/google-analytics-for-wordpress/$first-party,script,domain=av01.tv
+||mediad2.jp^
+||genieessp.com^
+@@||av01.tv/wp-content/themes/wp-script-theme/vendor/*/trigger_video_hls.js
+av01.tv###ad-header
+av01.tv###ad-video-page
+av01.tv###back-to-top
+av01.tv###overlay-advertising
+www.av01.tv##.ad-body
+@@||googletagmanager.com^$third-party,domain=www.av01.tv
+||juicyads.com^
+@@||www.googletagmanager.com^$domain=av01.tv
+||www.suncityad.com^
+||www.av01.tv/images/partners/2033-v2.gif
+||https://www.av01.tv/images/partners/fuyao/300x250-2.gif
+||https://www.av01.tv/images/partners/fuyao/300x250-3.gif
+www.av01.tv##a[href^="http://www.suncityad.com"]
+
+!http://www.minnano-av.com/
+||www.minnano-av.com/top_center_bn/pc_new_ban/sidebar_bn.html
+||www.queen-casino.info/affi/
+www.minnano-av.com##.leftbottom_bn
+
+!http://r18videos.com/
+||aff.jskyservices.com^
+
+!javout
+||images.dmca.com^
+||referrer.disqus.com^
+||glitter.services.disqus.com^
+||links.services.disqus.com^
+||cdn.viglink.com^
+||disqus.com/api/*/listrelated.json?
+||google-analytics.com/ga.js$important,script
+javout.net##.adsbox
+javout.net###toTop
+!||widgets.amung.us^
+@@||ajax.cloudflare.com/cdn-cgi/scripts/$third-party,script
+||feeds.feedburner.com/~fc/
+||d3oep4gb91kpuv.cloudfront.net^
+||d3al52d8cojds7.cloudfront.net^
+!||r18.com^$third-party,domain=~japanhub.net
+javout.net##.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links:style(display:block!important;)
+javout.net##.addthis_native_toolbox
+/\:\/\/s3\.amazonaws\.com\/.*[a-f0-9\/]{50,}/$third-party,xmlhttprequest,domain=~amazon.com
+||google-analytics.com/analytics.js$important,script,domain=javout.net
+javout.net##.banner-bottom
+player.javout.net###nuevoa
+player.javout.net##.vjs-scroll
+player.javout.net###invideo_wrapper
+javout.net##.social
+!javout.net##.banner-bottom
+||boudja.com^
+||charmour.club^
+||charmour.club^$popup
+openload.co##+js(abort-current-inline-script.js, adblock, adblock2)
+||elanatality.info^$third-party
+||realtime.services.disqus.com^
+||djv99sxoqpv11.cloudfront.net^
+||smothere.pro^$third-party
+||newsupdatewe.info^$third-party
+!jav321で動画が見れない
+!||r18.com^$third-party,domain=~japanhub.net
+||siterdm.com^$third-party
+
+!javdoe
+||d31qbv1cthcecs.cloudfront.net^
+||google-analytics.com/analytics.js$important,script,domain=www.javdoe.tv
+||ie8eamus.com^$third-party
+www.javdoe.tv##.fa-share
+www.javdoe.tv##[id*="ScriptRoot"]
+www.javdoe.tv##div[id*="ScriptRootC"]
+!http://egg.5ch.net/test/read.cgi/software/1524667609/424-428
+!||www.googletagmanager.com^
+||affiliateone.jp^
+||affiliateone.jp^$popup
+!DMMリンクがこれでブロックされてしまう
+!||ad.dmm.com^
+||affiliateone.jp^
+||notifications-online.systems^
+||notifications-online.systems^$popup
+||push-notification.tools^
+||push-notification.tools^$popup
+||vhldwuv6om.com^
+www.javdoe.tv##iframe[src^="https://avsex.me/"]
+@@||javdoe.tv^$generichide
+||onesignal.com^
+/invoke.js$domain=www.javdoe.tv
+javdoe.tv##+js(abort-on-property-write.js, spot)
+||alexametrics.com^
+javdoe.tv###external-embed:style(display: block!important;)
+javdoe.tv###preroll
+||embed.media/asset/default/player/plugins/vast-8.4.13.js
+||adqy6rzwcs.com/83/3b/87/833b870434edc35fb743c2615f5cb480.js
+||muqson0kgr.com/ae/86/74/ae8674228ade5ffb8808fb014d870ff8.js
+/^https?:\/\/([a-z0-9]{8,10}\.)?[a-z0-9]{5,14}\.(com|bid|online|top|club)\/([a-z0-9]{2}\/){3}[a-f0-9]{32}\.js$/$third-party,script,domain=www.javdoe.com
+
+!erovi.jp
+||dmm.co.jp^$popup,domain=erovi.jp
+erovi.jp##.reviewticker4
+
+!jav2be
+||smartsuppchat.com/loader.js
+||www.jav2be.com/images/avdvd_tv.jpg
+
+!アダルトサイト
+@@||exosrv.com^$domain=avgle.com
+@@||avgle.com/cdn-cgi/apps/head/$domain=avgle.com
+avgle.com#@##player_3x2_container
+@@||pussl48.com^$domain=avgle.com
+||syndication.exosrv.com/ads-iframe-display.php
+||dxlive.com^$third-party
+||bn.dxlive.com^$popup
+||sex-and-flirt.com^
+avgle.com##+js(abort-on-property-read.js, ExoLoader.serve)
+avgle.com##+js(abort-on-property-read.js, AaDetector)
+avgle.com##+js(nowebrtc.js)
+avgle.com##+js(set-constant.js, showBlockIf, noopFunc)
+avgle.com###player_3x2_close:style(font-size: 250% !important;)
+!||s4.histats.com^
+avgle.com##.container > div[style*="overflow: hidden"]
+.info/*/*/*/*/$domain=avgle.com
+||avgle.com/images.php
+||st.adxxx.info/js/adv_out.js
+@@||s10.histats.com/js15_as.js$domain=avgle.com
+avgle.com###aoverlay
+avgle.com##.alert-danger
+||static.adxadserv.com^
+avgle.com##.hidden-xs > a > img[src$=".gif"]
+avgle.com##.video-banner
+
+!http://nukitomo.me
+@@||ci.phncdn.com/videos/
+nukitomo.me###article_ad
+nukitomo.me##.vjs-poster
+
+!share-videos.se
+share-videos.se##img[alt="banner"]
+||static.share-videos.se/js/jquery.magnific-popup.min.js
+||srv1.aaacompany.net/load.js
+||static.share-videos.se/images/gk/728_90.png
+||amateur-contents.com/img/ryuusyutu1.png
+share-videos.se##div[style="margin-left:120px;"]
+!http://egg.5ch.net/test/read.cgi/software/1556498678/321
+||admesia.com^
+
+!JavTube
+javtb.se##.pc_main
+
+!javpm.com to javsun.net
+!||syndication.exosrv.com^$popup
+!https://ads.exosrv.com/nativeads.js
+!https://ads.exosrv.com/ads.js
+!https://www.javwide.com
+javsun.net##[id$="_ads"]
+javsun.net##.fa-pinterest-p
+javsun.net##.fa-share
+||jsc.mgid.com^
+javsun.net##[id*="ScriptRoot"]
+javsun.net##div[id*="ScriptRootC"]
+||fabrkrup.com/get/1551789?zoneid=
+||www.embed.media/asset/default/player/plugins/vast-
+javsun.net##.afs_ads
+||log.vcdn.io^
+||pub.javwide.com/un4dlq5.js
+javsun.net###preroll_ads
+javsun.net##iframe[width="300"][height="250"]
+||embed.best/asset/default/player/plugins/vast-*.js
+
+
+!japanhub
+||javhub.net/img/r18_un.jpg
+||theporndude.com/graphics/tpd-$third-party
+||javhub.net/img/r18_
+||advnet.xyz^
+japanhub.net###r18
+japanhub.net##.ad-body
+japanhub.net##.addthis_sharing_toolbox
+||entitlements.jwplayer.com^$third-party
+japanhub.net##.afs_ads
+||trmnsite.com^$third-party
+japanhub.net###wrapper > .container > .row > .col-12
+||promo-bc.com^$popup
+||reberr.pro^$third-party
+||exosrv.com^
+
+
+!redtube
+redtube.com##^script:has-text(tj_ads)
+redtube.com##+js(abort-on-property-write.js, rAb)
+redtube.com##+js(abort-on-property-read.js, _goat)
+redtube.*##+js(pornhub-popup-defuser.js)
+||ht.redtube.com^
+redtube.com##.remove_ads:style(position: absolute!important; left: -3000px!important;)
+redtube.com##.tja:style(position: absolute!important; left: -3000px!important;)
+redtube.com##.video-listing.two-in-row > li.first-in-row:nth-child(4n-1):style(clear: none !important; margin-left: 25px !important;)
+redtube.com##.video-listing.two-in-row:style(width: 100% !important;)
+redtube.com##.video_left_section > .hd .subtxt:style(position: absolute!important; left: -3000px!important;)
+redtube.com###ab_banner
+redtube.com###content_container > .show_page_modals + div
+redtube.com###content_container > div[class]:not(.show_page_modals):not([id]):not([style])
+redtube.com###pb_block
+
+!bejav
+bejav.net##.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links:style(display:block!important;)
+||ootqfqjhzfrtn.com^$third-party
+||sosbyncpkyw.com^$third-party
+bejav.net##.ads-sidebar
+bejav.net##.ads-square
+bejav.net##.glyphicon-arrow-up
+fembed.com##+js(abort-on-property-read.js, decodeURI)
+fembed.com##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
+fembed.com##+js(disable-newtab-links.js)
+fembed.com##+js(setInterval-defuser.js, (), 500)
+
+!xvideo-jp.com
+||muryouav.avximg.com/2019-01/upload/b0b430c31430a5bca89e175b91f28e8861812745.gif
+||event2.xvideo-jp.com/dmm_campaign.php
+xvideo-jp.com##.pc-ranking
+||ad.moo-mam-tai.com^
+||share-videos.se/js/pjs.js
+||d2swpuhpwp3khd.cloudfront.net^
+xvideo-jp.com###dmmad
+xvideo-jp.com##.p-articleDMM
+||stats.wp.com/e-201904.js$domain=xvideo-jp.com
+||xvideo-jp.com/wp-cron.php
+embed.share-videos.se###logo
+embed.share-videos.se###ad_html
+
+!loveh.org
+||cdn.alistcloud.com/adsv/serving.js
+!||drrcckbju3nd0.cloudfront.net/v0/serving?sid=5092&cbf=__alist_adsv.display
+!||drrcckbju3nd0.cloudfront.net/m/imp?sid=5092&adid=
+||drrcckbju3nd0.cloudfront.net^
+||octopuspop.click/ad/pup.js
+
+!ero-nuki.net
+||adm.shinobi.jp^
+||adflare.jp^
+||cdn.alistcloud.com^
+||srv1.aaacompany.net^
+ero-nuki.net###movie_ad
+!↓いらないかも
+!@@||phncdn.com^$domain=ero-nuki.net|hmk-temp.com
+
+!kissjav
+||hgub2polye.com^$third-party
+kissjav.com##+js(popads-dummy.js)
+||webgekeniuos.com^$third-party
+kissjav.com###player-advertising
+
+!av.movie
+||i.imgur.com/Oz4G3br.gif
+av.movie##.video-banner
+av.movie###app-download
+!||www.gstatic.com/recaptcha^$domain=av.movie
+
+!spankbank
+||doublepimp.com^
+||a.spankbang.com^
+spankbang.com##.vjs-poster
+||adtng.com^
+
+!380.cc
+||adxpansion.com^
+||pub.sitetag.us^
+380cc.cc###playertopads:style(height: 51px!important; position: absolute!important; left: -3000px!important;)
+380cc.cc##.tothetop
+380cc.cc##img[width="468"][height="60"]
+380cc.cc##iframe[width="300"][height="250"]
+video.520cc.cc###inplayer
+380cc.cc##.ad_title
+
+!7mm
+||histats.com^
+||exoclick.com^
+||st.adxxx.me/js/adv_out.js
+7mm.tv##a[href*=".exoclick.com"]
+7mm.tv##.SC_TBlock
+||adxxx.com^
+7mm.tv##a[href^="https://adxxx.com/"]
+||cnzz.com^
+||adqy6rzwcs.com^
+||mm9841.com/asset/default/player/plugins/vast-8.4.13.js
+verystream.com##+js(nano-setTimeout-booster)
+
+!jav321
+www.jav321.com###popup-container
+
+!javqd
+!||i.imgur.com/fG7ss74.gif
+||avsex.me/js/pc.html
+||newdonate.com^$third-party
+||lifeideas.site^$third-party
+||cachlambanhdongian.com^$third-party
+||placeholder.com^$image,domain=javqd.tv
+||tsyndicate.com^
+/^https?:\/\/([a-z0-9]{8,10}\.)?[a-z0-9]{5,14}\.(com|bid|online|top|club)\/([a-z0-9]{2}\/){3}[a-f0-9]{32}\.js$/$third-party,script
+@@||embed.media^$generichide
+embed.media##+js(abort-on-property-write.js, Fingerprint2)
+javqd.tv###preroll_ads
+embed.media#@#.afs_ads
+
+!thatav
+||adxadtracker.com^
+||trackingpro.pro^$third-party
+thatav.net##.col-12 > div > iframe
+||ca.clcknads.pro^
+||trackingpro.pro^
+thatav.net##.ad-body
+||b3z29k1uxb.com^$third-party
+
+
+
+!javwhores
+javwhores.com##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
+javwhores.com##+js(setInterval-defuser.js, (), 500)
+||fd7qz88ckd.com^
+||chatbro.com/embed.js$third-party
+||ptawe.com^$third-party
+||www.javwhores.com/ads.txt
+||h-cdn.com/cmd/get_geoip?
+
+!javtc
+||engine.phn.doublepimp.com/Redirect.eng?MediaSegmentId=$popup,domain=javtc.com
+embed.media##.afs_ads
+javtc.tv##iframe[width="300"][height="250"]
+/^https?:\/\/[a-z0-9]{5,14}\.(com|bid|online|top|club)\/[0-9a-f]{32}\/invoke.js$/$third-party,script,domain=javtc.tv
+||adservme.com^
+!||menhv.com/api/direct
+!https://1.menhv.com/api/direct/66545
+!https://1.menhv.com/api/direct/66545$popup
+||shailsha.com^
+||menhv.com^
+
+
+
+
+!javmeet
+www.javmeet.com##.container > div[id$="ScriptRoot"]
+www.javmeet.com##.col-md-4.col-xs-12.col-sm-12 > center:first-child
+
+!prof
+eroprofile.com##+js(abort-current-inline-script.js, ExoLoader)
+||wpncdn.com^$third-party
+eroprofile.com##iframe[width="300"][height="250"]
+
+!javwork
+jav.work##.video-boxad
+jav.work##li.releated_video:has(> .releatedadsholder)
+jav.work##.hotad_bottom
+jav.work##.video_ad
+openload.co##+js(abort-current-inline-script, $, contextmenu)
+openload.*##+js(abort-on-property-read, BetterJsPop)
+openload.*##+js(abort-current-inline-script, atob, decodeURIComponent)
+openload.*##+js(set-constant, sadbl, false)
+openload.co##^script:has-text(popAdsLoaded)
+||avfay.com/js/s.js
+
+!txxx
+txxx.com###fel-udpl
+txxx.com##.player > span > table[style="transform: scale(1);"]
+
+!javmec
+||muqson0kgr.com^
+embed.media##+js(abort-on-property-read.js, AaDetector)
+www.javmec.com###preroll_ads
+www.embed.media##.jw-settings-sharing
+||logger.pw^$third-party
+
+!highporn
+||revbigo.com^
+||ads.adxadserv.com^
+||infloots.pro^$third-party
+||contextrio.pro^$popup
+||dotuate.pro^$popup
+||contextrio.pro^$script
+||dotuate.pro^$script
+
+!xxjav
+||pornvideocdn.xyz/static/tmp/$image
+zh.xxjav.xyz##.self-gg
+zh.xxjav.xyz##.float-ads
+zh.xxjav.xyz##.float-ads-backgroud
+
+!javsix.xyz
+rapidvid.to##+js(addEventListener-defuser, contextmenu, preventDefault)
+rapidvid.to##+js(window.open-defuser)
+rapidvid.to##+js(abort-current-inline-script, Math, zfgloaded)
+discordapp.com##html.u-overflowHidden:style(overflow-y: scroll !important;)
+||javsix.xyz/wp-content/plugins/visitors-traffic-
+||hypertrackeraff.com^$third-party
+||javsix.xyz/wp-content/plugins/wp-adblock-dedect/
+!||popads.net/pop.js^$domain=javsix.xyz
+||ppfpocea.com^$third-party
+||deloplen.com/apu.php?$domain=rapidvid.to
+
+!extremetube
+!||adxpansion.com^
+extremetube.com##+js(abort-on-property-read, exbl)
+extremetube.com##+js(abort-on-property-read, ExoLoader)
+extremetube.com##+js(abort-on-property-write, ppAb)
+||d144jmuhz9kvbq.cloudfront.net^
+||cdn1-static-extremetube.spankcdn.net/js/fuckadblock.js
+||adsession.com^$third-party
+||ht.extremetube.com/js/ht.js?site_
+extremetube.com###pb_block
+extremetube.com##.adsBox
+extremetube.com##.text-ad
+extremetube.com##.adsbox
+extremetube.com##.noPopunder
+extremetube.com##.tj-add-text
+extremetube.com##.vjs-inplayer-closeandplay
+extremetube.com##.attentionMsg
+
+!vjav
+||sextoysgfs.com/saber/vjav/dutti/
+||vjav.com/images/ads/
+||mysmokingmistress.com/saber/vjav/dutti/
+||asiangfsex.com/saber/vjav/dutti/
+vjav.com##.player-wrap
+!vjav.com##div[style="width: 100%; height: 0; padding-bottom: 55.555555555556%"]
+vjav.com##td[style="transform: scale(0.99);"] > div
+vjav.com##span > table
+||in6.zog.link^
+||cradver.livejasmin.com^$popup
+!||vjav.com/assets/vendor.6391859e316f1cbc5f91.min.js
+!||vjav.com/assets/vendor.6391859e316f1cbc5f91.min.js
+||vjav.com/assets/vendor.$script
+||utubejobs.com/Campaigns/
+vjav.com##.poper
+
+!fbjav
+fbjav.net##.ads-sidebar
+fbjav.net##.ads-square
+fbjav.net##.SC_TBlock
+fbjav.net##.glyphicon-arrow-up
+||86a6b542l7.com^
+||www.svpri.xyz/asset/default/player/plugins/vast-8.4.13.js
+www.svpri.xyz##.afs_ads
+
+!85videos
+||www.av-yoyo.com/images/top700_
+www.85videos.com##.inplayer.hidden-xs
+
+!javfull
+||redlele.com^$third-party
+fembed.com##+js(abort-on-property-read, AaDetector)
+fembed.com##+js(aopr, jwplayer.utils.Timer)
+||d2glav2919q4cw.cloudfront.net^
+
+!javhd
+||xineday.com^
+||waust.at^$third-party
+javhd.today##.ads
+javhd.today##.ads-footer
+||d2glav2919q4cw.cloudfront.net^
+javhd.today##.afs_ads
+
+
+
+
+
+
+
+! END

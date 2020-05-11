@@ -1,0 +1,18 @@
+もちパッドとは
+- テキストファイルを共同で編集できるエディタです。
+- PHP, MySQL環境があれば動作するので、レンタル鯖などに簡単に設置できます。
+- フリーです。
+
+
+インストール手順
+mochipad.zipを展開する
+settings.iniを設定する
+test.phpでエラーが出ないことを確認する
+phpmyadminでmochipadデータベースを作成する
+mochipad.sqlを流し込むか、init.phpを実行する
+phpmyadminでmochipad内にdataテーブルが作成されていることを確認する。
+以上。
+
+使い方
+/index.htmlを開く
+作りたいテキストのタイトルを入力してOKボタンを押す。

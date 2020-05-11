@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/default.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Description" content="「もちフィルタ」は軽量な広告ブロックフィルタです。" />
+<meta name="Keywords" content="もちフィルタ,餅フィルタ,広告ブロックフィルタ,広告フィルタ,adblock" />
+<title>もちフィルタ（広告ブロック）</title>
+
+<style>
+.table3, .table3 th, .table3 td {
+  border-collapse: collapse;
+  border:1px solid #000;
+}
+</style>
+
+</head>
+
+<body>
+
+
+<a href="/"><img src="new8629-300x300.jpg" width="30" height="30" alt="image">TOPに戻る</a>
+
+<h1>もちフィルタ（広告ブロック）</h1>
+
+<ul class="cbox filter">
+  <li class="filter-li"><strong class="filter-button"><a href="abp:subscribe?location=https://raw.githubusercontent.com/eEIi0A5L/adblock_filter/master/mochi_filter.txt&amp;title=もちフィルタ（広告ブロック）">フィルタを購読する</a></strong>(github)</li>
+  <li class="filter-li">(<a href="https://raw.githubusercontent.com/eEIi0A5L/adblock_filter/master/mochi_filter.txt">中身を見る</a>)(github)</li>
+</ul>
+
+<h2>もちフィルタの特徴</h2>
+<ul>
+<li><span class="highlight">軽量な</span>広告ブロックフィルタ。</li>
+<li>サイズが小さい＝<span class="highlight">使用メモリが少ない</span><br/>
+    使用メモリ：もちフィルタは<span class="highlight">2.6MB</span><br/>
+    （比較として、EasyList+EasyPrivacy+豆腐では<span class="highlight">9.6MB</span>）</li>
+</ul>
+<img src="mochi_result.jpg" alt="image"/>
+<ul>
+<li>もちフィルタは、EasyListと豆腐フィルタから必要最小限のフィルタを抜き出したもの＋高速化（※）。</li>
+<li>（※）正規表現を減らした。要素フィルタを適用すべきサイトに限定した。</li>
+<li>ページをもちのように白くキレイにする。</li>
+<li><span style="border : 2px solid #093 ; border-color:red;">もちフィルタの方針：普段よく見るサイトだけフィルタできればよい。たまにしか見ないサイトは別に広告が出ても良い。</span></li>
+<li><span class="highlight">EasyList、EasyPrivacy、 豆腐、'JPN: AdGuard Japanese filter​​​​​'をオフ</span>にして、その代わりに<span class="highlight">もちフィルタをオン</span>にして使用してください。</li>
+<li>もちフィルタ適用後は、購読されているフィルタは<a href="mochi_tekiyougo.jpg">このように</a>なります。</li>
+<li>もちフィルタは、EasyList、EasyPrivacy、豆腐フィルタ、'JPN: AdGuard Japanese filter​​​​​'ははずして使用されることを想定されていますが、同時に使用してもフィルタが重複するだけで問題はありません（と思う）。</li>
+<li><span class="highlight">できるだけ正規表現を使わないようにして処理を高速化しています。</span></li>
+<li>中身を見るとわかりますが、<span class="highlight">フィルタはサイト単位に記述されています。</span></li>
+<li>ほぼ全てのフィルタにドメインを指定しているので<span style="text-decoration: underline; text-decoration-color:red;" title="誤爆：正常なのに間違ってブロックされてしまうこと。">誤爆</span>はほとんどない。（はず……）</li>
+<li>対応サイト：
+<ul>
+<li>Youtube：動画上の広告＋ページレイアウト上の広告</li>
+<li>Yahoo!Japan：広告＋高速化</li>
+<li>Twitter：広告</li>
+<li>ニコ生＋ニコ動：広告＋高速化</li>
+<li>５ちゃんねる、２ちゃんねる：広告＋高速化</li>
+<li>価格.com：広告</li>
+<li>ファミ通：広告</li>
+<li>Impress：広告</li>
+<li>AnimateTimes：広告</li>
+<li>Weblio：広告＋高速化</li>
+<li>Alc：広告＋高速化</li>
+<li>Naverまとめ：広告</li>
+<li>Wikia：広告</li>
+<li>Dailymotion：広告</li>
+<li>他</li>
+<li>海外のサイトをよくアクセスする人は、<a href="mochi_extended.html">もち拡張フィルタ</a>も使用してください。</li>
+</ul>
+</li>
+</ul>
+
+（「高速化」というのは、画面上の見た目の広告ではなく、内部で広告用スクリプトを読み込んでいるのを全て遮断して、余計な通信を発生させないことによって、速度向上させたことを意味しています。）
+
+
+<h3>Q. 本当に軽量なのか？</h3>
+もちフィルタは「普段よく見るサイトだけブロックできればよい」という方針により、「Generic Cosmetic Filters」（ドメイン指定無しの要素非表示。「##.ad」←こういうやつ）を最小限に抑えることができました。<br />
+「Generic Cosmetic Filters」は、アクセスしたすべてのページに対して毎回チェック処理が走るため、少なければ少ないほどメモリ、CPUにやさしくなります。（<a href="ublock_comment.jpg" target="_blank">参照</a>）<br/>
+
+<table class="table3">
+ <tr><th>名前</th><th>Generic Cosmetic Filtersの数</th></tr>
+ <tr><td><a href="https://kb.adguard.com/en/general/adguard-ad-filters#japanese">JPN: AdGuard Japanese filter​​​​​</a></td><td>72</td></tr>
+ <tr><td><a href="http://tofukko.r.ribbon.to/abp.html">豆腐</a></td><td>142</td></tr>
+ <tr><td><a href="/mochi.html">もちフィルタ</a></td><td>4</td></tr>
+ <tr><td><a href="https://easylist.to/">EasyList</a></td><td>19800</td></tr>
+</table>
+
+モバイル用
+<table class="table3">
+ <tr><th>名前</th><th>Generic Cosmetic Filtersの数</th></tr>
+ <tr><td><a href="https://280blocker.net/">280 Blocker</a></td><td>825</td></tr>
+ <tr><td><a href="/tamago.html">たまごフィルタ</a></td><td>2</td></tr>
+</table>
+
+<hr>
+<ul>
+<li><a href="mochi_kokoro.html">もちフィルタの高速化のこころがけ</a></li>
+</ul>
+
+<hr>
+
+
+<a href="https://jbbs.shitaraba.net/internet/24461/">もちフィルタ掲示板</a>（名無し掲示板）
+
+<hr>
+<a href="/"><img src="new8629-300x300.jpg" width="30" height="30" alt="image">TOPに戻る</a>
+
+
+
+<hr>
+<div class="footer">
+Twitter: <a href="https://twitter.com/mochi_adfilter">@mochi_adfilter</a><br/>
+email: <a href="mailto:mochifilter@yahoo.co.jp">mochifilter@yahoo.co.jp</a><br/>
+</div>
+</body>
+
+</html>
