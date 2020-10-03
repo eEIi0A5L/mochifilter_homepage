@@ -17,9 +17,8 @@ var baseurl = "https://raw.githubusercontent.com/eEIi0A5L/adblock_filter/master/
 function set( id, filename, filtername, comment) {
 	var element=document.getElementById(id);
 	var url4abp = "abp:subscribe/?location=" + baseurl + filename + "&amp;title=" + filtername + comment;
-	//var html1 = filtername + "：<a href=\"" + url4abp + "\">フィルタを購読する</a>";
-	var html1 = filtername + "：";
-	var html2 = "<a href=\"" + baseurl + filename + "\">中身を見る</a>";
+	var html1 = filtername + "：<a href=\"" + url4abp + "\">フィルタを購読する</a>";
+	var html2 = "（<a href=\"" + baseurl + filename + "\">中身を見る</a>）";
 	var html = html1 + html2;
 	element.innerHTML = html;
 }
