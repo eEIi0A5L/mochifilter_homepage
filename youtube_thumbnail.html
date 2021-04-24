@@ -170,6 +170,12 @@
 			return ret;
 		}
 
+		result = text.match( /y2u\.be\/([^&\?]*)/ );
+		if ( result != null ) {
+			ret = result[1];
+			return ret;
+		}
+
 
 		//alert(ret);
 		return ret;
