@@ -24,6 +24,30 @@ body {
 }
 */
 
+
+
+/* ライトモード用のスタイル */
+:root {
+ --text-color: #333;
+ --background-color: #fff;
+}
+
+/* ダークモード用のスタイル */
+@media (prefers-color-scheme: dark) {
+ :root {
+  --text-color: #fff;
+  --background-color: #333;
+ }
+}
+
+/* スタイルの適用 */
+body {
+ color: var(--text-color);
+ background-color: var(--background-color);
+}
+
+
+
 .highlight {
     background: linear-gradient(transparent 65%,#fff94d 40%);
     font-style: normal;
