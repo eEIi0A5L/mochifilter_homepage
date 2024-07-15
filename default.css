@@ -45,6 +45,10 @@ body {
  color: var(--text-color);
  background-color: var(--background-color);
 }
+textarea {
+ color: var(--text-color);
+ background-color: var(--background-color);
+}
 
 
 
