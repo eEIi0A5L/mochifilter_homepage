@@ -28,8 +28,10 @@ body {
 
 /* ライトモード用のスタイル */
 :root {
- --text-color: #333;
- --background-color: #fff;
+  --text-color: #333;
+  --background-color: #fff;
+  --a-visited-color: #681DA8;
+  --a-visited-color: #1A0DAB;
 }
 
 /* ダークモード用のスタイル */
@@ -37,6 +39,8 @@ body {
  :root {
   --text-color: #fff;
   --background-color: #333;
+  --a-visited-color: #BCA5D1;
+  --a-visited-color: #AAC1E1;
  }
 }
 
@@ -49,7 +53,12 @@ textarea {
  color: var(--text-color);
  background-color: var(--background-color);
 }
-
+a:link { 
+  color: var(--a-link-color);
+}
+a:visited {
+  color: var(--a-visited-color);
+}
 
 
 .highlight {
