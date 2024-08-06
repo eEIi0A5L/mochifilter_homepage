@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<meta charset="utf-8">
-<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico">
-<link rel="stylesheet" href="default.css" type="text/css" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta charset="UTF-8">
 <title>パスワード自動生成</title>
 <script type="text/javascript">
 <!--
@@ -43,7 +40,7 @@ function makepass( keta, include_symbol) {
 
 		// "_"を一つ入れる
 		var this_char = charlist[type].charAt(index);
-		if ( is_have_underbar == false && keta==14 && rand( 0, keta - i) < 1 ) {
+		if ( is_have_underbar == false && keta==16 && rand( 0, keta - i) < 1 ) {
 			this_char = "_";
 			is_have_underbar = true;
 		}
@@ -58,12 +55,12 @@ function showpass() {
 	var passstr = makepass( 8, false);
 	element.innerHTML = passstr;
 
-	var element=document.getElementById("pass14eisu");
-	var passstr = makepass( 14, false);
+	var element=document.getElementById("pass16eisu");
+	var passstr = makepass( 16, false);
 	element.innerHTML = passstr;
 
-	var element=document.getElementById("pass16");
-	var passstr = makepass( 16, true);
+	var element=document.getElementById("pass20");
+	var passstr = makepass( 20, true);
 	element.innerHTML = passstr;
 }
 // -->
@@ -74,8 +71,8 @@ function showpass() {
 <p style="cursor:pointer;">パスワードを自動生成します。</p>
 <div id="pass8" style="font-family:monospace;"></div>
 <br>
-<div id="pass14eisu" style="font-family:monospace;"></div>
+<div id="pass16eisu" style="font-family:monospace;"></div>
 <br>
-<div id="pass16" style="font-family:monospace;"></div>
+<div id="pass20" style="font-family:monospace;"></div>
 </body>
 </html>
