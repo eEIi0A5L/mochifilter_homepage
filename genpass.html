@@ -33,7 +33,7 @@ function makepass( keta, include_symbol) {
 	);
 	var randnum = Math.random();
 	var passstr = ""; // 最終的なパスワード
-	var is_have_underbar = true; // 本当はfalseにしなければ_が入らないが、_を入れるとFirefoxでダブルクリックで文字列選択できなくなることがわかったので、この機能をOFFするために、trueに変更した。2016/5/10
+	var is_have_underbar = false; 
 	for ( var i = 0; i < keta; i++) {
 		var start_type = 1;
 		if ( include_symbol ) {
@@ -44,7 +44,7 @@ function makepass( keta, include_symbol) {
 
 		// "_"を一つ入れる
 		var this_char = charlist[type].charAt(index);
-		if ( is_have_underbar == false && keta==16 && rand( 0, keta - i) < 1 ) {
+		if ( is_have_underbar == false && keta>=10 && rand( 0, keta - i) < 1 ) {
 			this_char = "_";
 			is_have_underbar = true;
 		}
@@ -55,12 +55,12 @@ function makepass( keta, include_symbol) {
 	return passstr;
 }
 function showpass() {
-	var element=document.getElementById("pass8");
+	var element=document.getElementById("pass_short");
 	var passstr = makepass( 8, false);
 	element.innerHTML = passstr;
 
-	var element=document.getElementById("pass16eisu");
-	var passstr = makepass( 16, false);
+	var element=document.getElementById("pass_long");
+	var passstr = makepass( 18, false);
 	element.innerHTML = passstr;
 
 	var element=document.getElementById("pass20");
@@ -73,9 +73,9 @@ function showpass() {
 <body onload="showpass()">
 <h1>パスワード自動生成</h1>
 <p style="cursor:pointer;">パスワードを自動生成します。</p>
-<div id="pass8" style="font-family:monospace;"></div>
+<div id="pass_short" style="font-family:monospace;"></div>
 <br>
-<div id="pass16eisu" style="font-family:monospace;"></div>
+<div id="pass_long" style="font-family:monospace;"></div>
 <br>
 <div id="pass20" style="font-family:monospace;"></div>
 </body>
