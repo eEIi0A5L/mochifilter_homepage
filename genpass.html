@@ -10,9 +10,9 @@
 <script type="text/javascript">
 <!--
 function rand( min, max) {
-	var hanni = max - min + 1;
-	var random = Math.floor( Math.random() * hanni) + min;
-	return random;
+    var hanni = max - min + 1;
+    var random = Math.floor( Math.random() * hanni) + min;
+    return random;
 }
 function escapeHTML(str) {
   return str.replace(/&/g, '&amp;')
@@ -22,50 +22,52 @@ function escapeHTML(str) {
             .replace(/'/g, '&#039;');
 }
 function makepass( keta, include_symbol) {
-	// Oと0はまぎらわしいので消した。2017.11.23
-	// Iとlも消した。2018.3.29
-	var charlist = new Array(
-		//"`~!@#$%^&*()_-+={}[]\|\"'<>,.?/",
-		"!\"#$%&'()*+,-./?",
-		"abcdefghijkmnopqrstuvwxyz",
-		"ABCDEFGHJKLMNPQRSTUVWXYZ",
-		"123456789"
-	);
-	var randnum = Math.random();
-	var passstr = ""; // 最終的なパスワード
-	var is_have_underbar = false; 
-	for ( var i = 0; i < keta; i++) {
-		var start_type = 1;
-		if ( include_symbol ) {
-			start_type = 0;
-		}
-		var type = rand( start_type, charlist.length - 1);
-		var index = rand( 0, charlist[type].length - 1);
+    // Oと0はまぎらわしいので消した。2017.11.23
+    // Iとlも消した。2018.3.29
+    var charlist = new Array(
+        //"`~!@#$%^&*()_-+={}[]\|\"'<>,.?/",
+        "!\"#$%&'()*+,-./?",
+        "abcdefghijkmnopqrstuvwxyz",
+        "ABCDEFGHJKLMNPQRSTUVWXYZ",
+        "123456789"
+    );
+    var randnum = Math.random();
+    var passstr = ""; // 最終的なパスワード
+    var is_have_underbar = false; 
+    for ( var i = 0; i < keta; i++) {
+        var start_type = 1;
+        if ( include_symbol ) {
+            start_type = 0;
+        }
+        var type = rand( start_type, charlist.length - 1);
+        var index = rand( 0, charlist[type].length - 1);
 
-		// "_"を一つ入れる
-		var this_char = charlist[type].charAt(index);
-		if ( is_have_underbar == false && keta>=10 && rand( 0, keta - i) < 1 ) {
-			this_char = "_";
-			is_have_underbar = true;
-		}
-		passstr += this_char;
-	}
-	console.log("passstr="+passstr);
-	passstr = escapeHTML(passstr);
-	return passstr;
+        /* // "_"を一つ入れる → 止めた。2025.03.13 */
+        var this_char = charlist[type].charAt(index);
+        /*
+        if ( is_have_underbar == false && keta>=10 && rand( 0, keta - i) < 1 ) {
+            this_char = "_";
+            is_have_underbar = true;
+        }
+        */
+        passstr += this_char;
+    }
+    console.log("passstr="+passstr);
+    passstr = escapeHTML(passstr);
+    return passstr;
 }
 function showpass() {
-	var element=document.getElementById("pass_short");
-	var passstr = makepass( 8, false);
-	element.innerHTML = passstr;
+    var element=document.getElementById("pass_short");
+    var passstr = makepass( 8, false);
+    element.innerHTML = passstr;
 
-	var element=document.getElementById("pass_long");
-	var passstr = makepass( 14, false);
-	element.innerHTML = passstr;
+    var element=document.getElementById("pass_long");
+    var passstr = makepass( 14, false);
+    element.innerHTML = passstr;
 
-	var element=document.getElementById("pass20");
-	var passstr = makepass( 20, true);
-	element.innerHTML = passstr;
+    var element=document.getElementById("pass20");
+    var passstr = makepass( 20, true);
+    element.innerHTML = passstr;
 }
 // -->
 </script>
